@@ -3,10 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospiclick</title>
+    <title>Hospiclick - Tu Hospital Digital</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Bienvenido a Hospiclick</h1>
-    <p>Prueba de GitHub Pages.</p>
+    <header>
+        <h1>Bienvenido a Hospiclick</h1>
+    </header>
+
+    <section id="encuesta">
+        <h2>Encuesta de Satisfacción</h2>
+        <iframe src="https://forms.google.com/tu-encuesta" width="100%" height="500px"></iframe>
+    </section>
+
+    <section id="juegos">
+        <h2>Mini Test de Salud</h2>
+        <p>Responde preguntas sobre tu salud para aprender más.</p>
+        <a href="juego.html">Jugar Ahora</a>
+    </section>
+
+    <section id="videos">
+        <h2>Testimonios</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoID" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section id="calificacion">
+        <h2>Califica nuestro servicio</h2>
+        <p>¿Cómo fue tu experiencia en Hospiclick?</p>
+        <form>
+            <label>Puntuación:</label>
+            <select>
+                <option>⭐</option>
+                <option>⭐⭐</option>
+                <option>⭐⭐⭐</option>
+                <option>⭐⭐⭐⭐</option>
+                <option>⭐⭐⭐⭐⭐</option>
+            </select>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
 </body>
 </html>
