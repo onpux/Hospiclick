@@ -7,40 +7,56 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
         <h1>Bienvenido a Hospiclick</h1>
+        <nav>
+            <ul>
+                <li><a href="#encuesta">Encuesta</a></li>
+                <li><a href="#juegos">Mini Test de Salud</a></li>
+                <li><a href="#videos">Testimonios</a></li>
+                <li><a href="#calificacion">Calificación</a></li>
+            </ul>
+        </nav>
     </header>
 
     <section id="encuesta">
         <h2>Encuesta de Satisfacción</h2>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfK2mQt9roqOLr4npTWvqR_bYdCmIbwKgugjwGGzxrYtif-mw/viewform" width="100%" height="500px"></iframe>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfK2mQt9roqOLr4npTWvqR_bYdCmIbwKgugjwGGzxrYtif-mw/viewform"
+                width="100%" height="500px" title="Encuesta de satisfacción">
+        </iframe>
     </section>
 
     <section id="juegos">
         <h2>Mini Test de Salud</h2>
         <p>Responde preguntas sobre tu salud para aprender más.</p>
-        <a href="https://es.educaplay.com/recursos-educativos/1154991-test_sobre_salud_y_enfermedades.html">Jugar Ahora</a>
+        <a href="https://es.educaplay.com/recursos-educativos/1154991-test_sobre_salud_y_enfermedades.html"
+           class="btn-jugar">Jugar Ahora</a>
     </section>
 
     <section id="videos">
         <h2>Testimonios</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/shorts/iTHWIMZhS24" frameborder="0" allowfullscreen></iframe>
+        <iframe width="560" height="315"
+                src="https://www.youtube.com/shorts/iTHWIMZhS24"
+                title="Video de testimonios" frameborder="0" allowfullscreen>
+        </iframe>
     </section>
 
     <section id="calificacion">
         <h2>Califica nuestro servicio</h2>
         <p>¿Cómo fue tu experiencia en Hospiclick?</p>
         <form>
-            <label>Puntuación:</label>
-            <select>
-                <option>⭐</option>
-                <option>⭐⭐</option>
-                <option>⭐⭐⭐</option>
-                <option>⭐⭐⭐⭐</option>
-                <option>⭐⭐⭐⭐⭐</option>
-            </select>
+            <div class="rating">
+                <input type="radio" name="star" id="star5"><label for="star5">⭐</label>
+                <input type="radio" name="star" id="star4"><label for="star4">⭐⭐</label>
+                <input type="radio" name="star" id="star3"><label for="star3">⭐⭐⭐</label>
+                <input type="radio" name="star" id="star2"><label for="star2">⭐⭐⭐⭐</label>
+                <input type="radio" name="star" id="star1"><label for="star1">⭐⭐⭐⭐⭐</label>
+            </div>
             <button type="submit">Enviar</button>
         </form>
     </section>
+
 </body>
 </html>
+
