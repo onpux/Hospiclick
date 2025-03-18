@@ -1,0 +1,53 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f8fb; /* Azul claro */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    background-color: #0077cc; /* Azul médico */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+}
+
+/* Secciones */
+section {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones y enlaces */
+a, button {
+    background-color: #0077cc; /* Azul médico */
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+button:hover, a:hover {
+    background-color: #005fa3; /* Azul más oscuro */
+}
+
+/* Formularios */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+select, button {
+    padding: 10px;
+    margin-top: 5px;
+}
