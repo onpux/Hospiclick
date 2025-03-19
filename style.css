@@ -115,10 +115,19 @@ select, button {
     }
 
     .iframe-container {
-        padding-bottom: 75%; /* Ajuste para móviles */
+        padding-bottom: 75%;
     }
 
     .rating label {
         font-size: 24px;
     }
+
+    .rating {
+        display: flex;
+        flex-direction: column; /* Acomoda las estrellas en columna */
+        align-items: center;
+        gap: 5px; /* Espacio entre cada estrella */
+    }
 }
+
+
