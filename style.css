@@ -1,92 +1,81 @@
 /* -------------------- ESTILOS GENERALES -------------------- */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f8fb; /* Azul claro */
-    color: #333;
     margin: 0;
     padding: 0;
+    background-color: #f4f8fb;
+    color: #333;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* -------------------- ENCABEZADO -------------------- */
 header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: #0077cc;
     color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 15px 5%;
 }
 
 .logo {
     display: flex;
     align-items: center;
+    gap: 15px;
 }
 
 .logo img {
     height: 50px;
-    margin-right: 15px;
 }
 
-.hospital-logo {
-    height: 50px;
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
 
-/* -------------------- NAVEGACIÓN -------------------- */
-nav ul {
+.nav ul {
     list-style: none;
-    padding: 0;
     display: flex;
     gap: 15px;
     margin: 0;
+    padding: 0;
 }
 
-nav ul li {
-    margin: 0;
+.nav ul li {
+    display: inline;
 }
 
-nav ul li a {
-    background-color: #0077cc;
+.nav ul li a {
+    text-decoration: none;
     color: white;
     padding: 10px 15px;
-    text-decoration: none;
     border-radius: 5px;
-    transition: background 0.3s ease-in-out;
-    display: inline-block;
-    cursor: pointer;
+    transition: background 0.3s;
 }
 
-nav ul li a:hover,
-nav ul li a:focus-visible {
-    background-color: #005fa3;
-    outline: none;
-}
-
-/* -------------------- BOTÓN DE ACCESO RÁPIDO -------------------- */
-.btn-acceso {
-    background-color: #ffcc00;
-    color: #333;
-    padding: 12px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s ease-in-out;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.btn-acceso:hover,
-.btn-acceso:focus-visible {
-    background-color: #e6b800;
-    outline: none;
+.nav ul li a:hover {
+    background: #005fa3;
 }
 
 /* -------------------- HERO SECTION -------------------- */
 .hero {
-    position: relative;
     text-align: center;
+    background: url('hospital-bg.jpg') center/cover no-repeat;
     color: white;
     padding: 100px 20px;
-    background: url('hospital-bg.jpg') center/cover no-repeat;
+    position: relative;
 }
 
 .hero::before {
@@ -100,101 +89,60 @@ nav ul li a:focus-visible {
     z-index: 1;
 }
 
-.hero h1,
-.hero p,
-.hero .btn-participar {
+.hero h1, .hero p, .hero .btn {
     position: relative;
     z-index: 2;
 }
 
 .hero h1 {
-    font-size: 32px;
-    margin-bottom: 15px;
+    font-size: clamp(24px, 5vw, 40px);
 }
 
 .hero p {
-    font-size: 18px;
+    font-size: clamp(16px, 3vw, 20px);
     max-width: 600px;
-    margin: 0 auto 20px;
+    margin: 0 auto;
 }
 
-.hero .btn-participar {
+.hero .btn {
+    display: inline-block;
     background-color: #ff6600;
     padding: 15px 25px;
     border-radius: 5px;
     text-decoration: none;
     color: white;
     font-size: 18px;
-    font-weight: bold;
-    transition: background 0.3s ease-in-out;
-    display: inline-block;
-    cursor: pointer;
+    transition: background 0.3s;
 }
 
-.hero .btn-participar:hover,
-.hero .btn-participar:focus-visible {
-    background-color: #cc5500;
-    outline: none;
+.hero .btn:hover {
+    background: #cc5500;
 }
 
-/* -------------------- SECCIONES GENERALES -------------------- */
-section {
-    background: white;
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.2s ease-in-out;
-}
-
-section:hover {
-    transform: scale(1.02);
-}
-
-/* -------------------- SECCIÓN DE RESULTADOS -------------------- */
-.resultados {
+/* -------------------- SECCIÓN DE SERVICIOS -------------------- */
+.servicios {
+    padding: 40px 20px;
     text-align: center;
 }
 
-.resultados .grafico {
-    width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
 }
 
-/* -------------------- ESTILO FAQ (Preguntas Frecuentes) -------------------- */
-.faq {
-    max-width: 800px;
-    margin: 0 auto;
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
 }
 
-.faq-item {
-    background: #e6f2ff;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.faq-item h3 {
-    margin: 0;
-    padding: 15px;
-    background: #0077cc;
-    color: white;
-    cursor: pointer;
-}
-
-.faq-item .faq-content {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 15px;
-    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
-}
-
-.faq-item.active .faq-content {
-    max-height: 200px; /* Ajustar según necesidad */
-    padding: 15px;
+.card:hover {
+    transform: scale(1.05);
 }
 
 /* -------------------- PIE DE PÁGINA -------------------- */
@@ -205,37 +153,36 @@ footer {
     padding: 20px;
 }
 
-footer a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
-}
-
-footer a:hover,
-footer a:focus-visible {
-    text-decoration: underline;
-    outline: none;
-}
-
 /* -------------------- RESPONSIVE DESIGN -------------------- */
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #0077cc;
         text-align: center;
     }
 
-    nav ul {
+    .nav ul {
         flex-direction: column;
-        align-items: center;
-        gap: 10px;
+        padding: 0;
     }
 
-    section {
-        width: 95%;
+    .nav ul li {
+        padding: 10px 0;
     }
 
-    .hero {
-        padding: 80px 15px;
+    .nav ul li a {
+        display: block;
+    }
+
+    .nav.active {
+        display: block;
     }
 }
