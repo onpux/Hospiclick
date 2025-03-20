@@ -1,4 +1,4 @@
-/* -------------------- ESTILOS GENERALES -------------------- */
+/* ESTILOS GENERALES */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -11,12 +11,7 @@ h1, h2, h3 {
     text-align: center;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* -------------------- ENCABEZADO -------------------- */
+/* ENCABEZADO */
 header {
     display: flex;
     align-items: center;
@@ -24,6 +19,10 @@ header {
     background-color: #0077cc;
     color: white;
     padding: 15px 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo {
@@ -53,15 +52,10 @@ header {
     padding: 0;
 }
 
-.nav ul li {
-    display: inline;
-}
-
 .nav ul li a {
     text-decoration: none;
     color: white;
     padding: 10px 15px;
-    border-radius: 5px;
     transition: background 0.3s;
 }
 
@@ -69,39 +63,32 @@ header {
     background: #005fa3;
 }
 
-/* -------------------- HERO SECTION -------------------- */
+/* HERO SECTION */
 .hero {
-    text-align: center;
-    background: url('hospital-bg.jpg') center/cover no-repeat;
-    color: white;
-    padding: 100px 20px;
+    background: url('img/hospital-bg.jpg') center/cover no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
+    text-align: center;
+    color: white;
 }
 
-.hero::before {
-    content: "";
+.overlay {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
 }
 
-.hero h1, .hero p, .hero .btn {
+.hero-content {
     position: relative;
     z-index: 2;
 }
 
 .hero h1 {
     font-size: clamp(24px, 5vw, 40px);
-}
-
-.hero p {
-    font-size: clamp(16px, 3vw, 20px);
-    max-width: 600px;
-    margin: 0 auto;
 }
 
 .hero .btn {
@@ -111,7 +98,6 @@ header {
     border-radius: 5px;
     text-decoration: none;
     color: white;
-    font-size: 18px;
     transition: background 0.3s;
 }
 
@@ -119,10 +105,9 @@ header {
     background: #cc5500;
 }
 
-/* -------------------- SECCIÓN DE SERVICIOS -------------------- */
+/* SECCIÓN DE SERVICIOS */
 .servicios {
     padding: 40px 20px;
-    text-align: center;
 }
 
 .grid {
@@ -141,11 +126,17 @@ header {
     transition: transform 0.3s;
 }
 
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
 .card:hover {
     transform: scale(1.05);
 }
 
-/* -------------------- PIE DE PÁGINA -------------------- */
+/* PIE DE PÁGINA */
 footer {
     background: #0077cc;
     color: white;
@@ -153,7 +144,7 @@ footer {
     padding: 20px;
 }
 
-/* -------------------- RESPONSIVE DESIGN -------------------- */
+/* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
