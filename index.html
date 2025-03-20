@@ -7,76 +7,96 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
-        <h1>Bienvenido a Hospiclick</h1>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="logo-hospiclick.png" alt="Hospiclick Logo">
+                <p>Una visión completa de la experiencia hospitalaria</p>
+            </div>
+            <img src="logo-hospital.png" alt="Logo Hospital Regional de Duitama" class="hospital-logo">
+        </div>
         <nav>
             <ul>
-                <li><a href="#encuesta">Encuesta</a></li>
-                <li><a href="#juegos">Mini Test de Salud</a></li>
-                <li><a href="#videos">Testimonios</a></li>
-                <li><a href="#calificacion">Calificación</a></li>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#indicadores">Indicadores</a></li>
+                <li><a href="#mejor-servicio">Mejor Servicio</a></li>
+                <li><a href="#colaboradores">Colaboradores</a></li>
+                <li><a href="#evaluacion">Evaluación</a></li>
+                <li><a href="#minitest">Minitest</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#faq">Preguntas Frecuentes</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
-
-    <section id="encuesta">
-        <h2>Encuesta de Satisfacción</h2>
-        <div class="iframe-container">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfK2mQt9roqOLr4npTWvqR_bYdCmIbwKgugjwGGzxrYtif-mw/viewform"
-                    title="Encuesta de satisfacción">
-            </iframe>
-        </div>
-    </section>
-
-    <section id="juegos">
-        <h2>Mini Test de Salud</h2>
-        <p>Responde preguntas sobre tu salud para aprender más.</p>
-        <div class="iframe-container">
-            <iframe allow="fullscreen; autoplay;" allowfullscreen 
-                    src="https://es.educaplay.com/juego/1154991-test_sobre_salud_y_enfermedades.html">
-            </iframe>
-        </div>
-    </section>
-
-<section id="videos">
-    <h2>Testimonios</h2>
-    <div class="iframe-container">
-        <iframe src="https://www.youtube.com/embed/MPmMOwqFfXc?si=kRxVeuWxBBFfkwnv"
-                title="Video de testimonios" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-        </iframe>
-    </div>
-</section>
-
-
-
-<section id="calificacion">
-    <h2>Califica nuestro servicio</h2>
-    <p>¿Cómo fue tu experiencia en Hospiclick?</p>
-    <form>
-        <div class="rating">
-            <input type="radio" name="star" id="star5" value="5"><label for="star5">⭐</label>
-            <input type="radio" name="star" id="star4" value="4"><label for="star4">⭐</label>
-            <input type="radio" name="star" id="star3" value="3"><label for="star3">⭐</label>
-            <input type="radio" name="star" id="star2" value="2"><label for="star2">⭐</label>
-            <input type="radio" name="star" id="star1" value="1"><label for="star1">⭐</label>
-        </div>
-        <button type="submit">Enviar</button>
-    </form>
-</section>
-
-
-<section id="resultados">
-    <h2>Resultados de la Encuesta</h2>
-    <div class="iframe-container">
-        <iframe 
-            src="https://docs.google.com/spreadsheets/d/1ljJopDrgiYIE_EOtKa0yTLnJJMYSO34hesHItkB9pF8/edit?resourcekey=&gid=1807732475&output=embed"
-            allowfullscreen>
-        </iframe>
-    </div>
-</section>
     
+    <section id="inicio" class="hero">
+        <video autoplay loop muted class="hero-video">
+            <source src="hospital-background.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1>Tu opinión transforma la salud</h1>
+            <p>Hospiclick es una plataforma interactiva que mejora la experiencia hospitalaria a través de la participación.</p>
+            <button class="cta-button" onclick="location.href='#encuesta'">Participar</button>
+        </div>
+    </section>
+
+    <section id="indicadores">
+        <h2>Socialización de Indicadores</h2>
+        <div class="chart-container">
+            <iframe src="indicadores.html"></iframe>
+        </div>
+    </section>
+
+    <section id="mejor-servicio">
+        <h2>Servicio Mejor Calificado</h2>
+        <p>Resumen del servicio más destacado del mes.</p>
+    </section>
+    
+    <section id="colaboradores">
+        <h2>Colaboradores Destacados</h2>
+        <p>Lista de profesionales reconocidos por su labor.</p>
+    </section>
+
+    <section id="minitest">
+        <h2>Minitest de Salud</h2>
+        <iframe src="https://es.educaplay.com/juego/1154991-test_sobre_salud_y_enfermedades.html"></iframe>
+    </section>
+
+    <section id="testimonios">
+        <h2>Testimonios</h2>
+        <iframe src="https://www.youtube.com/embed/MPmMOwqFfXc"></iframe>
+    </section>
+
+    <section id="faq">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="faq-container">
+            <details>
+                <summary>¿Qué es Hospiclick?</summary>
+                <p>Hospiclick es una plataforma digital que recopila opiniones de los pacientes...</p>
+            </details>
+            <details>
+                <summary>¿Cómo puedo participar?</summary>
+                <p>Puede participar accediendo a la encuesta en línea...</p>
+            </details>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Hospiclick - Todos los derechos reservados.</p>
+        <p>Contacto: info@hospiclick.com | Tel: +57 123 456 7890</p>
+    </footer>
 </body>
 </html>
+
