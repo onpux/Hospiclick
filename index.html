@@ -3,119 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospiclick - Tu Hospital Digital</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Hospital - Página Responsiva</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script> <!-- Para el menú hamburguesa -->
 </head>
 <body>
+
+    <!-- Encabezado -->
     <header>
-        <div class="header-container">
-            <div class="logo-container">
-                <img src="https://i.imgur.com/WsMPvl2.png" alt="Hospiclick Logo">
-                <p>Una visión completa de la experiencia hospitalaria</p>
-            </div>
-            <img src="https://i.imgur.com/WsMPvl2.png" alt="Logo Hospital Regional de Duitama" class="hospital-logo">
+        <div class="logo">
+            <img src="logo.png" alt="Logo Hospital">
+            <h1>Hospital XYZ</h1>
         </div>
-        <nav>
+        <button class="menu-toggle">&#9776;</button> <!-- Icono de hamburguesa -->
+        <nav class="nav">
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#indicadores">Indicadores</a></li>
-                <li><a href="#mejor-servicio">Mejor Servicio</a></li>
-                <li><a href="#colaboradores">Colaboradores</a></li>
-                <li><a href="#evaluacion">Evaluación</a></li>
-                <li><a href="#minitest">Minitest</a></li>
-                <li><a href="#testimonios">Testimonios</a></li>
-                <li><a href="#faq">Preguntas Frecuentes</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    
-    <section id="inicio" class="hero">
-        <video autoplay loop muted class="hero-video">
-            <source src="hospital-background.mp4" type="video/mp4">
-        </video>
-        <div class="hero-content">
-            <h1>Tu opinión transforma la salud</h1>
-            <p>Hospiclick es una plataforma interactiva que mejora la experiencia hospitalaria a través de la participación.</p>
-            <img src="https://i.imgur.com/cprG4DU.png" alt="Corazón sobre una mano" class="hero-image">
-            <button class="cta-button" onclick="location.href='#encuesta'">Participar</button>
-        </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Bienvenido al Hospital XYZ</h1>
+        <p>Cuidamos de tu salud con los mejores especialistas y tecnología de punta.</p>
+        <a href="#" class="btn">Agendar Cita</a>
     </section>
 
-    <section id="indicadores">
-        <h2>Socialización de Indicadores</h2>
-        <div class="chart-container">
-            <iframe src="indicadores.html"></iframe>
-        </div>
-    </section>
-
-    <section id="mejor-servicio">
-        <h2>Servicio Mejor Calificado</h2>
-        <p>Resumen del servicio más destacado del mes.</p>
-        <img src="https://i.imgur.com/kHmYMY6.png" alt="Médico y doctora vectorial" class="banner-image">
-    </section>
-    
-    <section id="colaboradores">
-        <h2>Colaboradores Destacados</h2>
-        <p>Lista de profesionales reconocidos por su labor.</p>
-        <img src="https://i.imgur.com/DGgNc2P.png" alt="Fotografía de doctores en el hospital">
-    </section>
-
-    <section id="minitest">
-        <h2>Minitest de Salud</h2>
-        <img src="https://i.imgur.com/Xn4pVTP.png" alt="Juego interactivo de salud">
-        <iframe src="https://es.educaplay.com/juego/1154991-test_sobre_salud_y_enfermedades.html"></iframe>
-    </section>
-
-    <section id="testimonios">
-        <h2>Testimonios</h2>
-        <div class="testimonios-container">
-            <img src="https://i.imgur.com/dSJBkN2.png" alt="Doctoras con un niño paciente">
-            <img src="https://i.imgur.com/T0xkDxd.png" alt="Madres y niños en sala de espera">
-            <img src="https://i.imgur.com/DGgNc2P.png" alt="Doctores en el hospital">
-            <img src="https://i.imgur.com/Li8ScZY.png" alt="Doctora con niña y madre en marco infantil">
-            <img src="https://i.imgur.com/IFTbxu6.png" alt="5 doctoras en sus uniformes">
-        </div>
-    </section>
-
-    <section id="faq">
-        <h2>Preguntas Frecuentes</h2>
-        <div class="faq-container">
-            <details>
-                <summary>¿Qué es Hospiclick?</summary>
-                <p>Hospiclick es una plataforma digital que recopila opiniones de los pacientes...</p>
-            </details>
-            <details>
-                <summary>¿Cómo puedo participar?</summary>
-                <p>Puede participar accediendo a la encuesta en línea...</p>
-            </details>
-        </div>
-    </section>
-
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <form>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre">
-            
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje"></textarea>
-            
-            <div class="contact-info">
-                <img src="https://i.imgur.com/y6YYFhu.png" alt="Teléfono">
-                <p>+57 123 456 7890</p>
-                
-                <img src="https://i.imgur.com/Z2jhC8X.png" alt="Teléfono 2">
-                <p>+57 987 654 3210</p>
+    <!-- Sección de Servicios -->
+    <section class="servicios">
+        <h2>Nuestros Servicios</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="consulta.jpg" alt="Consulta médica">
+                <h3>Consulta Médica</h3>
             </div>
-            
-            <button type="submit">Enviar</button>
-        </form>
+            <div class="card">
+                <img src="emergencias.jpg" alt="Emergencias">
+                <h3>Emergencias 24/7</h3>
+            </div>
+            <div class="card">
+                <img src="cirugia.jpg" alt="Cirugía">
+                <h3>Cirugía Especializada</h3>
+            </div>
+        </div>
     </section>
-    
+
+    <!-- Pie de Página -->
     <footer>
-        <p>&copy; 2025 Hospiclick - Todos los derechos reservados.</p>
-        <p>Contacto: info@hospiclick.com | Tel: +57 123 456 7890</p>
+        <p>© 2025 Hospital XYZ - Todos los derechos reservados</p>
     </footer>
+
 </body>
 </html>
+
