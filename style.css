@@ -1,4 +1,4 @@
-/* Estilos generales */
+/* -------------------- ESTILOS GENERALES -------------------- */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f8fb; /* Azul claro */
@@ -7,7 +7,7 @@ body {
     padding: 0;
 }
 
-/* ENCABEZADO */
+/* -------------------- ENCABEZADO -------------------- */
 header {
     background-color: #0077cc;
     color: white;
@@ -31,12 +31,13 @@ header {
     height: 50px;
 }
 
-/* NAVEGACIÓN */
+/* -------------------- NAVEGACIÓN -------------------- */
 nav ul {
     list-style: none;
     padding: 0;
     display: flex;
     gap: 15px;
+    margin: 0;
 }
 
 nav ul li {
@@ -49,14 +50,18 @@ nav ul li a {
     padding: 10px 15px;
     text-decoration: none;
     border-radius: 5px;
-    transition: background 0.3s;
+    transition: background 0.3s ease-in-out;
+    display: inline-block;
+    cursor: pointer;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a:focus-visible {
     background-color: #005fa3;
+    outline: none;
 }
 
-/* Botón de acceso rápido */
+/* -------------------- BOTÓN DE ACCESO RÁPIDO -------------------- */
 .btn-acceso {
     background-color: #ffcc00;
     color: #333;
@@ -64,20 +69,42 @@ nav ul li a:hover {
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    transition: background 0.3s;
+    transition: background 0.3s ease-in-out;
+    display: inline-block;
+    cursor: pointer;
 }
 
-.btn-acceso:hover {
+.btn-acceso:hover,
+.btn-acceso:focus-visible {
     background-color: #e6b800;
+    outline: none;
 }
 
-/* HERO SECTION */
+/* -------------------- HERO SECTION -------------------- */
 .hero {
     position: relative;
     text-align: center;
     color: white;
     padding: 100px 20px;
     background: url('hospital-bg.jpg') center/cover no-repeat;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero h1,
+.hero p,
+.hero .btn-participar {
+    position: relative;
+    z-index: 2;
 }
 
 .hero h1 {
@@ -99,14 +126,18 @@ nav ul li a:hover {
     color: white;
     font-size: 18px;
     font-weight: bold;
-    transition: background 0.3s;
+    transition: background 0.3s ease-in-out;
+    display: inline-block;
+    cursor: pointer;
 }
 
-.hero .btn-participar:hover {
+.hero .btn-participar:hover,
+.hero .btn-participar:focus-visible {
     background-color: #cc5500;
+    outline: none;
 }
 
-/* SECCIONES GENERALES */
+/* -------------------- SECCIONES GENERALES -------------------- */
 section {
     background: white;
     padding: 20px;
@@ -114,14 +145,14 @@ section {
     width: 80%;
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.2s;
+    transition: transform 0.2s ease-in-out;
 }
 
 section:hover {
     transform: scale(1.02);
 }
 
-/* SECCIÓN DE RESULTADOS */
+/* -------------------- SECCIÓN DE RESULTADOS -------------------- */
 .resultados {
     text-align: center;
 }
@@ -132,7 +163,7 @@ section:hover {
     margin: 20px auto;
 }
 
-/* ESTILO FAQ - Preguntas Frecuentes */
+/* -------------------- ESTILO FAQ (Preguntas Frecuentes) -------------------- */
 .faq {
     max-width: 800px;
     margin: 0 auto;
@@ -155,12 +186,18 @@ section:hover {
 }
 
 .faq-item .faq-content {
-    display: none;
-    padding: 15px;
-    background: white;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
 }
 
-/* PIE DE PÁGINA */
+.faq-item.active .faq-content {
+    max-height: 200px; /* Ajustar según necesidad */
+    padding: 15px;
+}
+
+/* -------------------- PIE DE PÁGINA -------------------- */
 footer {
     background: #0077cc;
     color: white;
@@ -175,11 +212,13 @@ footer a {
     font-weight: bold;
 }
 
-footer a:hover {
+footer a:hover,
+footer a:focus-visible {
     text-decoration: underline;
+    outline: none;
 }
 
-/* RESPONSIVE */
+/* -------------------- RESPONSIVE DESIGN -------------------- */
 @media screen and (max-width: 768px) {
     header {
         flex-direction: column;
@@ -188,6 +227,7 @@ footer a:hover {
 
     nav ul {
         flex-direction: column;
+        align-items: center;
         gap: 10px;
     }
 
