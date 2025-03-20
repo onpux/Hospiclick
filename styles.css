@@ -16,20 +16,34 @@ header {
 
 .menu-toggle {
     font-size: 24px;
-    background: none;
-    border: none;
+    background: #0056b3;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 5px;
     color: white;
     cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
 }
 
+.menu-toggle:hover {
+    background: #00408d;
+    transform: scale(1.1);
+}
+
+/* Mejora en la transición del menú */
 .nav {
     display: none;
+    background: #0056b3;
+    padding: 10px;
+    text-align: center;
+    transition: max-height 0.5s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
 }
 
 .nav.active {
     display: block;
-    background: #0056b3;
-    padding: 10px;
+    max-height: 500px;
 }
 
 .nav ul {
@@ -95,6 +109,11 @@ iframe {
 
 /* Responsividad */
 @media (max-width: 768px) {
+    section {
+        padding: 15px;
+        margin: 10px;
+    }
+
     .nav ul {
         text-align: center;
     }
@@ -104,6 +123,10 @@ iframe {
         margin: 5px 0;
     }
     
+    .nav ul li a {
+        font-size: 16px;
+    }
+
     section img {
         width: 100%;
     }
