@@ -1,16 +1,21 @@
-const menuToggle = document.querySelector('.menu-toggle');
-const navMenu = document.querySelector('.nav');
-const navLinks = document.querySelectorAll('.nav a'); // Captura los enlaces del menú
+// script.js
 
-if (menuToggle && navMenu) {
-    menuToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".nav");
+
+    // Toggle navigation menu visibility and accessibility
+    menuToggle.addEventListener("click", () => {
+        const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", !isExpanded);
+        nav.classList.toggle("nav-open");
     });
 
-    // Cierra el menú cuando se hace clic en un enlace
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            navMenu.classList.remove('active');
-        });
+    // Optional: Close nav on outside click
+    document.addEventListener("click", (event) => {
+        if (!nav.contains(event.target) && !menuToggle.contains(event.target)) {
+            nav.classList.remove("nav-open");
+            menuToggle.setAttribute("aria-expanded", "false");
+        }
     });
-}
+});
