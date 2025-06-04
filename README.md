@@ -14,7 +14,7 @@ This project is a practical example of responsive web design using only HTML and
 
 ## Recommended structure
 - `index.html`: Main structure of the page.
-- `estilos.css`: Custom styles and responsive rules.
+- `styles.css`: Custom styles and responsive rules.
 
 ## Customization
 You can easily adapt colors, fonts, and layout by editing the `estilos.css` file.
