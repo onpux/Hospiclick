@@ -62,7 +62,7 @@ body {
   to { opacity: 1; }
 }
 .highlight, .about-section, .contact-section, .results-section {
-  background: rgba(180,180,190,0.22); /* gris translúcido */
+  background: rgba(120,120,130,0.32); /* más gris y opaco */
   color: #111 !important;
   border-radius: 1.2rem;
   box-shadow: 0 4px 24px #e5737333, 0 1.5px 0 #fff2;
@@ -77,10 +77,10 @@ body {
   margin-top: 18px;
   margin-bottom: 0;
   padding-left: 20px;
-  color: #00bfae;
+  color: #111 !important;
 }
 .gallery-section {
-  background: rgba(180,180,190,0.22);
+  background: rgba(120,120,130,0.32);
   color: #111 !important;
   border-radius: 18px;
   box-shadow: 0 4px 24px #00e67622;
@@ -101,7 +101,7 @@ body {
   min-width: 340px;
   max-width: 340px;
   height: 260px;
-  background: rgba(180,180,190,0.22);
+  background: rgba(120,120,130,0.32);
   color: #111 !important;
   border-radius: 14px;
   box-shadow: 0 2px 12px #00e67622;
@@ -120,7 +120,7 @@ body {
   height: 180px;
   object-fit: cover;
   border-radius: 10px;
-  background: rgba(180,180,190,0.22);
+  background: rgba(120,120,130,0.32);
   margin-bottom: 8px;
   box-shadow: 0 2px 8px #00e67622;
 }
@@ -166,7 +166,7 @@ body {
   transform: scale(1.15);
 }
 .contact-section {
-  background: rgba(180,180,190,0.22);
+  background: rgba(120,120,130,0.32);
   color: #111 !important;
   border-radius: 18px;
   box-shadow: 0 4px 24px #00e67622;
@@ -194,11 +194,11 @@ body {
   height: 48px;
   object-fit: contain;
   border-radius: 50%;
-  background: rgba(180,180,190,0.22);
+  background: rgba(120,120,130,0.32);
   box-shadow: 0 2px 8px #00e67622;
 }
 .results-section {
-  background: rgba(180,180,190,0.22);
+  background: rgba(120,120,130,0.32);
   color: #111 !important;
   border-radius: 18px;
   box-shadow: 0 4px 24px #00e67622;
@@ -214,7 +214,7 @@ body {
   height: 260px;
   border: none;
   border-radius: 10px;
-  background: rgba(180,180,190,0.22);
+  background: rgba(120,120,130,0.32);
   box-shadow: 0 2px 8px #00e67622;
   margin-bottom: 10px;
 }
@@ -241,4 +241,3 @@ footer {
     padding: 12px 4px 8px 4px;
   }
 }
-
